@@ -29,9 +29,10 @@ function App() {
   
     const completeTodo = index => {
       const newTodos = [...todos];
-      newTodos[index].isCompleted = true;
+      newTodos[index].isCompleted = !newTodos[index].isCompleted;
       console.log(newTodos);
       setTodos(newTodos);
+      newTodos[index].isCompleted = true;
     }
   
     const removeTodo = index => {
