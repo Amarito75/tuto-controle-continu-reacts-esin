@@ -30,18 +30,14 @@ function App() {
     const completeTodo = index => {
       const newTodos = [...todos];
       newTodos[index].isCompleted = !newTodos[index].isCompleted;
-      console.log(newTodos);
       setTodos(newTodos);
       newTodos[index].isCompleted = true;
     }
   
     const removeTodo = index => {
-      console.log("type of index:", typeof (index));
-      console.log("in remove todo:", index);
       const newTodos = [...todos];
       newTodos.splice(index, 1);
       setTodos(newTodos);
-      console.log(newTodos);
     }
   
   
